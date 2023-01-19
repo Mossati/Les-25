@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les 25</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script type="text/JavaScript">
+  $(document).ready(function() {
+    $("p").hide();
+    $("#button1").click(function(){
+      var plus1 = parseInt($("#plus1").val(), 10);
+      var plus2 = parseInt($("#plus2").val(), 10);
+      var som = plus1 + plus2;
+      $("#uitkomst1").show();
+      $("#uitkomst1").text("Uitkomst: " + som);
+    })
+    $("#button2").click(function(){
+      var min1 = parseInt($("#min1").val(), 10);
+      var min2 = parseInt($("#min2").val(), 10);
+      var som = min1 - min2;
+      $("#uitkomst2").show();
+      $("#uitkomst2").text("Uitkomst: " + som);
+    })
+    $("#button3").click(function(){
+      var keer1 = parseInt($("#keer1").val(), 10);
+      var keer2 = parseInt($("#keer2").val(), 10);
+      var som = keer1 * keer2;
+      $("#uitkomst3").show();
+      $("#uitkomst3").text("Uitkomst: " + som);
+    })
+
+    $("#clear1").click(function(){
+      $("#uitkomst1").hide();
+    })
+    $("#clear2").click(function(){
+      $("#uitkomst2").hide();
+    })
+    $("#clear3").click(function(){
+      $("#uitkomst3").hide();
+    })
+  });
+</script>
+<noscript>
+  Activeer JavaScript!
+</noscript>
+</head>
+<body>
+  <h2 id="rekenmachine">Rekenmachine</h2>
+  <form>
+  <h3>Plus (+)</h3>
+  <label>Getal 1</label>
+  <input id="plus1" type="text" placeholder="getal...">
+  <br><br>
+  <label>Getal 2</label>
+  <input id="plus2" type="text" placeholder="getal...">
+  <br><br>
+  <input id="button1" name="button1" type="button" value="Bereken">
+  <input id="clear1" name="clear1" type="button" value="Clear">
+  <p id="uitkomst1"></p>
+  </form>
+
+  <form>
+  <h3>Min (-)</h3>
+  <label>Getal 1</label>
+  <input id="min1" type="text" placeholder="getal...">
+  <br><br>
+  <label>Getal 2</label>
+  <input id="min2" type="text" placeholder="getal...">
+  <br><br>
+  <input id="button2" name="button2" type="button" value="Bereken">
+  <input id="clear2" name="clear2" type="button" value="Clear">
+  <p id="uitkomst2"></p>
+  </form>
+
+  <form>
+  <h3>Keer (*)</h3>
+  <label>Getal 1</label>
+  <input id="keer1" type="text" placeholder="getal...">
+  <br><br>
+  <label>Getal 2</label>
+  <input id="keer2" type="text" placeholder="getal...">
+  <br><br>
+  <input id="button3" name="button3" type="button" value="Bereken">
+  <input id="clear3" name="clear3" type="button" value="Clear">
+  <p id="uitkomst3"></p>
+  </form>
+</body>
+</html>
